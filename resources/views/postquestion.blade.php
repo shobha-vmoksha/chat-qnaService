@@ -99,15 +99,13 @@ function removeclass(id){
         
 
 
-    // $(".remove").hide()
-    // $(".copy").mouseover(function() {
-    //     $('.remove').show();
+    $(".remove").hide()
+    $(".copy").mouseover (function() {
+        $('.remove').show();
         
-    // }).mouseout(function() {
-    //     $('.remove').hide();
-    // });
-
-
+    }).mouseout(function() {
+        $('.remove').hide();
+    });
     });
 
 
