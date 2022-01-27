@@ -44,4 +44,16 @@ Route::get('/viewquestion/{id}', [App\Http\Controllers\QuestionController::class
 
 
 
-Route::get('/postquestion', [App\Http\Controllers\QuestionController::class, 'postquestion'])->name('home');
+// Route::get('/postquestion', [App\Http\Controllers\QuestionController::class, 'postquestion'])->name('home');
+// Route::get('/multi', [App\Http\Controllers\QuestionController::class, 'mutli'])->name('mutli');
+
+
+
+
+
+
+
+
+
+
+Route::get('/postques', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');

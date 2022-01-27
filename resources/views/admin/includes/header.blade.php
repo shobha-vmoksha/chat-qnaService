@@ -195,13 +195,21 @@
                 <a href="{{ url('home') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Question</a>
                
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
               <a href="{{ url('postquestion') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Post Question</a>
-              </li>
+              </li> -->
+              <!-- <li class="nav-item">
+              <a href="{{ url('multi') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Multi input</a>
+                </a>
+              </li> -->
+            
+            
+              
+
+            
+
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+              <a href="{{ url('postques') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Post Ques</a>
                 </a>
               </li>
             </ul>

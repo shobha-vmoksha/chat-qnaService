@@ -49,4 +49,25 @@ class QuestionController extends Controller
     {
         return view('postquestion');
     }
+
+    public function mutli()
+    {
+        return view('multi');
+    }
+
+ 
+
+
+  
+
+   
+
+   
+
+    public function postques()
+    {
+        return view('postques');
+    }
+
+    
 }
