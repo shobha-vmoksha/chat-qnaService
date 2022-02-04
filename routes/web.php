@@ -34,26 +34,5 @@ Auth::routes();
 Route::get('/', function () {
     return view('admin.pages.index');
 });
-Route::get('/home', [App\Http\Controllers\QuestionController::class, 'index'])->name('home');
-
-Route::get('/add', [App\Http\Controllers\QuestionController::class, 'add'])->name('add');
-
-Route::post('/question.store',[App\Http\Controllers\QuestionController::class,'store']);
-
-Route::get('/viewquestion/{id}', [App\Http\Controllers\QuestionController::class, 'viewquestion'])->name('viewquestion');
-
-
-
-// Route::get('/postquestion', [App\Http\Controllers\QuestionController::class, 'postquestion'])->name('home');
-// Route::get('/multi', [App\Http\Controllers\QuestionController::class, 'mutli'])->name('mutli');
-
-
-
-
-
-
-
-
-
-
+Route::get('/home', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
 Route::get('/postques', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
