@@ -19,7 +19,7 @@ Route::get('/logout', function () {
     Auth::logout();
     return redirect('/login');
 });
-
+//passing to chat-qns
 
 Route::get('/upload', [\App\Http\Controllers\SalesController::class, 'index']);
 Route::post('/upload', [\App\Http\Controllers\SalesController::class, 'upload']);
