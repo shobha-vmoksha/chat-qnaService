@@ -26,6 +26,8 @@ Route::post('/upload', [\App\Http\Controllers\SalesController::class, 'upload'])
 Route::get('/batch', [\App\Http\Controllers\SalesController::class, 'batch']);
 Auth::routes();
 
+// line added
+
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Auth::routes();
