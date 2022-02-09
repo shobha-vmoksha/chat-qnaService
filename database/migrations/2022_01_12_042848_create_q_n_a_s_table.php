@@ -15,6 +15,7 @@ class CreateQNASTable extends Migration
     {
         Schema::create('q_n_a_s', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
             $table->string('question_name');
             $table->longText('answer');
             $table->integer('unique_id');
