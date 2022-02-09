@@ -5,9 +5,12 @@
     <div class="col-md-12 mt-4">
         <div class="card">
             <div class="card-body">
-                <div class="row mb-5">
-                    <button type="button" class="btn btn-secondary btn-lg"> <i class="fa fa-question-circle" aria-hidden="true"> User Says</i></button>
+                <div class="row justify-content-center">
+                    <div class="row mt-3">
+                        <h4>User Say's</h4>
+                    </div>
                 </div>
+
 
 
                 <div class="container">
@@ -31,6 +34,20 @@
                                         <div id="newRow"></div>
                                     </div>
                                 </div>
+
+
+                                <div class="form-group">
+                                    <label for="answer">Post Your Anser Here...</label>
+                                    <textarea class="form-control" id="answer" rows="3"></textarea>
+                                </div>
+
+                                <div class="form-group mt-4">
+                                    <div class="col text-center">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+
+
                             </form>
 
 
@@ -66,7 +83,7 @@
 
         })
     }
-    
+
     $("#addRow").click(function() {
         i++;
         var html = '';
@@ -86,17 +103,17 @@
         $(this).closest('#inputFormRow').remove();
     });
     //hide row
-//     function showButton($event) {
-//         var element = $(event.target);
-//         var val = $(event.target).val();
+    //     function showButton($event) {
+    //         var element = $(event.target);
+    //         var val = $(event.target).val();
 
-//   var x = document.getElementById("val");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
+    //   var x = document.getElementById("val");
+    //   if (x.style.display === "none") {
+    //     x.style.display = "block";
+    //   } else {
+    //     x.style.display = "none";
+    //   }
+    // }
 
 
 
@@ -146,14 +163,6 @@
     //     $('#removeRow').hide();
     // });
     // }
-
-        
-       
-    
-
-
-
-  
 </script>
 <style>
 

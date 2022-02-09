@@ -33,8 +33,6 @@ Auth::routes();
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', function () {
-    return view('admin.pages.index');
-});
+
 Route::get('/home', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
 Route::get('/postques', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
