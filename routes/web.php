@@ -20,7 +20,7 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 //passing to chat-qns
-
+//hanges with respect to navbar and pag
 Route::get('/upload', [\App\Http\Controllers\SalesController::class, 'index']);
 Route::post('/upload', [\App\Http\Controllers\SalesController::class, 'upload']);
 Route::get('/batch', [\App\Http\Controllers\SalesController::class, 'batch']);
