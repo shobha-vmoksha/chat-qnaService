@@ -19,22 +19,27 @@ Route::get('/logout', function () {
     Auth::logout();
     return redirect('/login');
 });
-//passing to chat-qns
-//hanges with respect to navbar and pag
-Route::get('/upload', [\App\Http\Controllers\SalesController::class, 'index']);
-Route::post('/upload', [\App\Http\Controllers\SalesController::class, 'upload']);
-Route::get('/batch', [\App\Http\Controllers\SalesController::class, 'batch']);
+////passing to chat-qns
+////hanges with respect to navbar and pag
+//Route::get('/upload', [\App\Http\Controllers\SalesController::class, 'index']);
+//Route::post('/upload', [\App\Http\Controllers\SalesController::class, 'upload']);
+//Route::get('/batch', [\App\Http\Controllers\SalesController::class, 'batch']);
+
+
 Auth::routes();
 
-// line added
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Auth::routes();
+Route::get('chatbot', function () {
+    return view('chatbot');
+});
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/', function () {
-//     return view('admin.pages.index');
-// });
+
+
+
+Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
+
+
 Route::get('/home', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
 Route::get('/postques', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
+Route::post('store', [App\Http\Controllers\QuestionController::class, 'store']);

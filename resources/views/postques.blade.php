@@ -7,9 +7,23 @@
             <div class="card-body">
                 <div class="row justify-content-center">
                     <div class="row mt-3">
-                        <h4>User Say's</h4>
+                        <h4>User Says</h4>
                     </div>
                 </div>
+
+
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
+
+                @if(session()->has('error'))
+                    <div class="alert alert-danger">
+                        {{ session()->get('error') }}
+                    </div>
+                @endif
+
 
 
 
@@ -17,9 +31,8 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Post Your Question Here...</div>
                         <div class="panel-body">
-
-
-                            <form method="post" action="">
+                            <form method="POST" action="{{ url('store') }}">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div id="inputFormRow">
@@ -30,33 +43,22 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div id="newRow"></div>
                                     </div>
                                 </div>
-
-
                                 <div class="form-group">
                                     <label for="answer">Post Your Anser Here...</label>
-                                    <textarea class="form-control" id="answer" rows="3"></textarea>
+                                    <textarea class="form-control" name="answer" id="answer" rows="3"></textarea>
                                 </div>
-
                                 <div class="form-group mt-4">
                                     <div class="col text-center">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
                                 </div>
-
-
                             </form>
-
-
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
