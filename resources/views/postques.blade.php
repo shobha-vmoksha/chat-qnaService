@@ -24,14 +24,11 @@
                     </div>
                 @endif
 
-
-
-
                 <div class="container">
                     <div class="panel panel-default">
                         <div class="panel-heading">Post Your Question Here...</div>
                         <div class="panel-body">
-                            <form method="POST" action="{{ url('store') }}">
+                            <form method="POST" action="{{ url('admin/store') }}">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-12">

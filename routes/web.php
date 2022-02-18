@@ -40,6 +40,12 @@ Route::get('chatbot', function () {
 Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
 
 
-Route::get('/home', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
-Route::get('/postques', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
-Route::post('store', [App\Http\Controllers\QuestionController::class, 'store']);
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function (){
+    Route::get('/home', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
+    Route::get('/postques', [App\Http\Controllers\QuestionController::class, 'postques'])->name('postques');
+    Route::post('store', [App\Http\Controllers\QuestionController::class, 'store']);
+});
+
+Route::get('/home', function (){
+    return "to user";
+});

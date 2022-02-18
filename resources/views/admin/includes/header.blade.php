@@ -191,9 +191,9 @@
             </a>
             <ul class="nav nav-treeview">
               <!-- <li class="nav-item">
-              
+
                 <a href="{{ url('home') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Question</a>
-               
+
               </li> -->
               <!-- <li class="nav-item">
               <a href="{{ url('postquestion') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Post Question</a>
@@ -202,14 +202,14 @@
               <a href="{{ url('multi') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Multi input</a>
                 </a>
               </li> -->
-            
-            
-              
 
-            
+
+
+
+
 
               <li class="nav-item">
-              <a href="{{ url('postques') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Post Ques</a>
+              <a href="{{ url('admin/postques') }}" class="nav-link active"> <i class="far fa-circle nav-icon"></i>Post Ques</a>
                 </a>
               </li>
             </ul>
@@ -827,27 +827,26 @@
 
   <!-- Content Wrapper. Contains page content -->
    <div class="content-wrapper" style="background:white">
-   
+
     <!-- <div class="content-header">
      <div class="container-fluid">
        <div class="row mb-2">
          <div class="col-sm-6">
             <h1 class="m-0">Dashboard</h1>
-          </div> 
+          </div>
          <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Dashboard v1</li>
             </ol>
-          </div>    
+          </div>
         </div>
       </div>
     </div> -->
-    
-
-
- 
 
 
 
-  
+
+
+
+
