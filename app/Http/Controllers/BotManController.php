@@ -13,7 +13,10 @@ class BotManController extends Controller
     public function handle()
     {
 
+        //to use this chatbot in web interfaces this webDriver is required
         DriverManager::loadDriver(\BotMan\Drivers\Web\WebDriver::class);
+
+        //this will act as variable that uses all the properties of botman
         $botman = app('botman');
 
         $botman->hears('help', function($botman){
@@ -26,13 +29,16 @@ class BotManController extends Controller
 
         $botman->hears('{message}', function($botman, $message) {
 
+            //if user say hi. it will return a response of line no 34
             if ($message == 'hi' || $message == "Hi") {
                 $botman->reply("Hi, Welcome to Dr.Gracia");
             }else{
+                //in this loop it will search for the keyword if it exists in db return the response.
                $findText = Question::where('title', 'like', '%' . $message . '%')->first();
                if(!is_null($findText)){
                    $botman->reply($findText->body);
                }else{
+                   //if it not exists return this line
                    $botman->reply('Oops! No data found...!');
                }
 

@@ -29,14 +29,14 @@ Route::get('/logout', function () {
 Auth::routes();
 
 
-
+//this will load the chat bot screen
 Route::get('chatbot', function () {
     return view('chatbot');
 });
 
 
 
-
+//chatbot uses the '/botman' end point for communications.
 Route::match(['get', 'post'], '/botman', 'App\Http\Controllers\BotManController@handle');
 
 
